@@ -55,24 +55,71 @@ The course is neatly divided into 7 comprehensive modules. Each module comes wit
    mouse clicks. It's a fun way to bring their creations to life! 
 
 
-## Getting Started 🚀
+## Getting Started With Grader Than:
 
-To get started, simply clone or download this repository into your **Grader Than
-Workspace**. 
+Follow these steps to enable your students to have full IDE support for Vex VR.
 
-1) After opening your **Grader Than Workspace**, open the terminal by pressing: 
-   - **`ctrl shift p`** (PC) 
-   - **`cmd shift p`** (Mac)
+**Prerequisites:** A [Grader Than Workspace setup](https://docs.graderthan.com/workspace/create/) is required.
 
-2) In the command pallet at the top of the screen type "Terminal: Create new terminal"
-3) In the terminal window that appears at the bottom of the screen type the
-   following command and press enter: `git clone
-   https://github.com/graderthan/5-8-python-teacher.git`
-4) Your done! You'll now see a file named "5-8-python-teacher" in your Grader
-   Than Workspace files on the left side of the screen.
+1. Create a `Python Course Content` dependency. Refer to these [instructions](https://docs.graderthan.com/workspace/config/#create-a-dependency) for guidance on setting up a dependency.
+2. Use the following script as your install guide for the `Python Course Content` dependency you just created:
 
-Each module is self-contained, so feel free to navigate through
-them in the order that best suits your curriculum.
+   <details>
+   <summary>Click to show dependency script</summary>
+
+   ```shell
+   #!/bin/bash
+
+   crsdir="/home/developer/Documents/course-content"
+
+   # Create the course content directory if it doesn't exist
+   mkdir -p "$crsdir"
+
+   git_repo_url=https://github.com/graderthan/6-8-python-quick.git
+
+   # Extract the repository name from the URL
+   repo_name=$(basename -- "${git_repo_url}")
+   repo_name="${repo_name%.*}"
+
+   # Navigate to the course directory
+   cd "$crsdir"
+
+   if [ -d "./$repo_name" ]; then
+   # The local repo exists.
+   cd "./$repo_name"
+   # Save student's local changes
+   git stash save
+   # Get the latest content
+   git pull -X ours
+   # Overwrite conflicting new changes with the student's saved changes 
+   git stash pop
+   # Resolve conflicts by preferring the checked-out version
+   git checkout --theirs .
+   git add .
+   else
+   # The local repo does not exist because it's the first time.
+   git clone "${git_repo_url}"
+   fi
+
+   # Set up the symbolic link
+   src_dir="/home/developer/Documents/course-content/${repo_name}/notebooks"
+   dest_dir="/home/developer/Documents/code/notebooks"
+
+   # Check if the destination directory exists, create it if it doesn't
+   mkdir -p "$(dirname "$dest_dir")"
+
+   # Create the symbolic link if it doesn't exist
+   if [ ! -L "$dest_dir" ]; then
+      ln -s "$src_dir" "$dest_dir"
+   fi
+
+   # If anything goes wrong don't prevent the workspace from starting.
+   exit 0
+   ```
+
+   </details>
+
+3. **🥳 Completion!** Your students and course now have full IDE support for Vex VR.
 
 We believe that learning to code should be fun, interactive, and accessible. With these resources, we hope to ignite a passion for programming in your students and equip them with the skills to explore the vast universe of coding.
 
