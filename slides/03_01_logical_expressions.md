@@ -22,6 +22,7 @@ style: |
     }
     pre code {
         padding: .7rem !important;
+        border-radius: 8px;
     }
 ---
 
@@ -305,7 +306,5 @@ result = False ← Change this line
     - Users respond with `yes` or `no` to indicate if it's raining.
     - The program checks `is_raining` for a `yes` value to assess rain conditions.
 
-Solution: `result = ((is_raining == "yes" or is_raining == "soon") and temperature < 100) or temperature < 50
-`
-
->
+Solution: `result = ((is_raining == "yes" or is_raining == "soon") and temperature < 100) or temperature < 50`
+-->

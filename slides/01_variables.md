@@ -22,6 +22,7 @@ style: |
     }
     pre code {
         padding: .7rem !important;
+        border-radius: 8px;
     }
 ---
 
