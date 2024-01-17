@@ -72,32 +72,29 @@ Follow these steps to enable your students to have full IDE support for Vex VR.
 
    git_repo_url=https://github.com/graderthan/6-8-python-quick.git
 
-   # Extract the repository name from the URL
    repo_name=$(basename -- "${git_repo_url}")
    repo_name="${repo_name%.*}"
 
-   # Navigate to the course directory
-   cd "$crsdir"
+   cd $crsdir
 
    if [ -d "./$repo_name" ]; then
-   # The local repo exists.
-   cd "./$repo_name"
-   # Save student's local changes
-   git stash save
-   # Get the latest content
-   git pull -X ours
-   # Overwrite conflicting new changes with the student's saved changes 
-   git stash pop
-   # Resolve conflicts by preferring the checked-out version
-   git checkout --theirs .
-   git add .
+      # The local repo exists.
+      cd "./$repo_name"
+      # Save student's local changes
+      git stash save
+      # Get the latest content
+      git pull -X ours
+      # Overwrite conflicting new changes with the student's save changes 
+      git stash pop
+      git checkout --theirs .
+      git add .
    else
-   # The local repo does not exist because it's the first time.
-   git clone "${git_repo_url}"
+      # The local repo does not exist b/c it's the first time.
+      git clone "${git_repo_url}"
    fi
 
    # Set up the symbolic link
-   src_dir="/home/developer/Documents/course-content/${repo_name}/notebooks"
+   src_dir="${crsdir}/${repo_name}/notebooks"
    dest_dir="/home/developer/Documents/code/notebooks"
 
    # Check if the destination directory exists, create it if it doesn't
