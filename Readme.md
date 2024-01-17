@@ -50,11 +50,6 @@ The course is neatly divided into 7 comprehensive modules. Each module comes wit
    Functions are like mini-programs within your program. This module helps
    students understand how to create and use these handy blocks of code. 
 
-### 7. **Click Listening**
-   Here, students learn to make their applications interactive by responding to
-   mouse clicks. It's a fun way to bring their creations to life! 
-
-
 ## Getting Started With Grader Than:
 
 Follow these steps to enable your students to have full IDE support for Vex VR.
