@@ -86,7 +86,7 @@ They are asked to change the `distance`` to another number and checkout the resu
 -->
 ---
 
-## What is a variables?
+## What is a variable?
 
 A variable in Python is a named container 📦 that holds data, like numbers or words, for use in your code.
 
