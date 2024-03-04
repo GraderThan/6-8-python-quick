@@ -52,11 +52,11 @@ The course is neatly divided into 7 comprehensive modules. Each module comes wit
 
 ## Getting Started With Grader Than:
 
-Follow these steps to enable your students to have full IDE support for Vex VR.
+You can follow these steps to place this content in your students' workspaces automatically. It will appear in the code directory the workspace opens up to by default. 
 
 **Prerequisites:** A [Grader Than Workspace setup](https://docs.graderthan.com/workspace/create/) is required.
 
-1. Create a `Python Course Content` dependency. Refer to these [instructions](https://docs.graderthan.com/workspace/config/#create-a-dependency) for guidance on setting up a dependency.
+1. Create a `Python Course Content` dependency. Please take a look at these [instructions](https://docs.graderthan.com/workspace/config/#create-a-dependency) for guidance on setting up a dependency.
 2. Use the following script as your install guide for the `Python Course Content` dependency you just created:
 
    <details>
@@ -84,7 +84,7 @@ Follow these steps to enable your students to have full IDE support for Vex VR.
       git stash save
       # Get the latest content
       git pull -X ours
-      # Overwrite conflicting new changes with the student's save changes 
+      # Overwrite conflicting new changes with the student's saved changes 
       git stash pop
       git checkout --theirs .
       git add .
@@ -97,7 +97,7 @@ Follow these steps to enable your students to have full IDE support for Vex VR.
    src_dir="${crsdir}/${repo_name}/notebooks"
    dest_dir="/home/developer/Documents/code/notebooks"
 
-   # Check if the destination directory exists, create it if it doesn't
+   # Check if the destination directory exists. Create it if it doesn't
    mkdir -p "$(dirname "$dest_dir")"
 
    # Create the symbolic link if it doesn't exist
@@ -105,20 +105,20 @@ Follow these steps to enable your students to have full IDE support for Vex VR.
       ln -s "$src_dir" "$dest_dir"
    fi
 
-   # If anything goes wrong don't prevent the workspace from starting.
+   # If anything goes wrong, don't prevent the workspace from starting.
    exit 0
    ```
 
    </details>
 
-3. **🥳 Completion!** Your students and course now have full IDE support for Vex VR.
+3. **🥳 Completion!** Your students and course now have access to this learning content.
 
-We believe that learning to code should be fun, interactive, and accessible. With these resources, we hope to ignite a passion for programming in your students and equip them with the skills to explore the vast universe of coding.
+Learning to code should be fun, interactive, and accessible. With these resources, we hope to ignite a passion for programming in your students and equip them with the skills to explore the vast universe of coding.
 
 Happy teaching! 🍎💻🌈
 
 ---
 
 If you have any questions or need further assistance, please don't hesitate to
-reach out to us at [support@graderthan.com](support@graderthan.com]). Let's make
+reach out to us at [portal.graderthan.com/contact-us/](https://portal.graderthan.com/contact-us/). Let's make
 coding a favorite adventure for your students! 🌟 
