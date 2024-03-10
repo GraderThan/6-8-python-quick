@@ -131,7 +131,35 @@ print(my_list[-3]) # Outputs: Python
 - Teach how to use the `in` keyword to check if a specific item exists within a list.
 - Emphasize the simplicity and usefulness of this operation for conditionals and loops. 
 -->
+---
 
+# Looping Through a List with `for` ➰
+
+- Introduce `for` loops with lists
+- Example of iterating through a list
+
+```python
+my_list = ["red", "orange", "blue", "green", "yellow"]
+for item in my_list:
+    print(item)
+```
+
+<!-- 
+- This slide introduces how to use `for` loops to iterate through lists in Python.
+- We show a simple example where we loop through `my_list` and print each color.
+-->
+
+---
+
+# Syntax for Looping Through a List
+
+- Basic syntax: `for ITEM in LIST`
+- Each loop iteration assigns `ITEM` to the current list element.
+
+<!-- 
+- Here we explain the syntax for looping through a list with a `for` loop.
+- We highlight that with each iteration, the variable `ITEM` gets assigned the value of the current element in the list.
+-->
 ---
 # Turtle Challenges 🐢
 
