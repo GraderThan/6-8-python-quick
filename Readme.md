@@ -36,19 +36,43 @@ The course is neatly divided into 7 comprehensive modules. Each module comes wit
 
    - **[Google Slides](https://drive.google.com/drive/folders/1Ys-_71AGSn3de3QUNSoiIKBlXTN83G4s?usp=sharing)**
    - **[Marp Slides 1](./slides/03_01_logical_expressions.md)**
-   - **[Notebook 1](./notebooks/03-01_logical_expressions.ipynb)**
+   - **[Notebook 1](./notebooks/03_01_logical_expressions.ipynb)**
+   - **[Marp Slides 2](./slides/03_02_conditional_statements.md)**
+   - **[Notebook 2](./notebooks/03_02_conditional_statements.ipynb)**
 
 ### 4. **Loops**
    Unravel the power of repetition in coding with loops. This is where students
    learn to automate tasks efficiently.
 
+   - **[Google Slides](https://drive.google.com/drive/folders/1Ys-_71AGSn3de3QUNSoiIKBlXTN83G4s?usp=sharing)**
+   - **[Marp Slides 1](./slides/04_01_while_loops.md)**
+   - **[Notebook 1](./notebooks/04_01_while_loops.ipynb)**
+   - **[Marp Slides 2](./slides/04_02_for_loops.md)**
+   - **[Notebook 2](./notebooks/04_02_for_loops.ipynb)**
+
 ### 5. **Lists**
    Jump into managing collections of data. Lists are powerful tools for
    organizing and manipulating multiple pieces of information. 
 
+   - **[Google Slides](https://drive.google.com/drive/folders/1Ys-_71AGSn3de3QUNSoiIKBlXTN83G4s?usp=sharing)**
+   - **[Marp Slides](./slides/05_lists.md)**
+   - **[Notebook](./notebooks/05_lists.ipynb)**
+
 ### 6. **Functions**
    Functions are like mini-programs within your program. This module helps
    students understand how to create and use these handy blocks of code. 
+
+   - **[Google Slides](https://drive.google.com/drive/folders/1Ys-_71AGSn3de3QUNSoiIKBlXTN83G4s?usp=sharing)**
+   - **[Marp Slides](./slides/06_functions.md)**
+   - **[Notebook](./notebooks/06_functions.ipynb)**
+
+### 7. **Click Listeners**
+   Click listeners are used to listen for clicks, and make your python code much
+   more interactive. Use these to take your programs to the next level.
+
+   - **[Google Slides](https://drive.google.com/drive/folders/1Ys-_71AGSn3de3QUNSoiIKBlXTN83G4s?usp=sharing)**
+   - **[Marp Slides](./slides/07_click_listeners.md)**
+   - **[Notebook](./notebooks/07_click_listeners.ipynb)**
 
 ## Getting Started With Grader Than:
 
