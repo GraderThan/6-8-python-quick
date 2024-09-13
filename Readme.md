@@ -2,7 +2,7 @@
 
 Hello, amazing educators! 👩‍🏫👨‍🏫
 
-We're thrilled to share with you this repository, a treasure trove of resources for teaching Python to 6th through 8th graders. This isn't your typical course content – it's a journey into the exciting world of Python programming, tailored specifically for young, curious minds!
+We're thrilled to share with you this repository, a treasure trove of resources for teaching Python to 6th through 12th graders. This isn't your typical course content – it's a journey into the exciting world of Python programming, tailored specifically for young, curious minds!
 
 ## What's Inside? 📦
 
